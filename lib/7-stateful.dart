@@ -17,11 +17,12 @@ class _SFApp extends State<SFWidget> {
   Widget build(BuildContext context){
     return MaterialApp(
       home:  Scaffold(
-        appBar: AppBar(title: Text('App Name'),),
-        body: Column(children: [Container(
-          margin: EdgeInsets.all(10.0),
-          child: ElevatedButton(onPressed: () {setState((){_products.add('PC');});}, child: Text('Add PC'))
-        )]),
+        appBar: AppBar(title: Text('App Name')),
+        body: Column(
+          children: [
+            Container(margin: EdgeInsets.all(10.0),child: ElevatedButton(onPressed: () {setState((){ _products.add('PC');print(_products);});}, child: Text('Add PC'))),
+            Column(children: _products.map((element)=> Card(child: Column(children: <Widget>[Text(element)]),)).toList())
+            ]),
         ),
     );
   }
