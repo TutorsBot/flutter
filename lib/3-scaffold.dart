@@ -7,9 +7,13 @@ void main(){
 class SampleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context){
-    return Scaffold(
-      body: Text("Sample Text"),
-    );
+    return MaterialApp(
+      home : Scaffold(
+        appBar: AppBar(
+        title: Text("Sample App", style: TextStyle(color: Colors.white)), backgroundColor: Colors.black,),
+        body: Text("Sample Body"),
+        backgroundColor: Colors.white12,
+    ));
   }
 }
 
