@@ -8,9 +8,10 @@ class App extends StatelessWidget{
     return MaterialApp(
       home : Scaffold(
       appBar: AppBar(
-      title: Text("Sample App", style: TextStyle(color: Colors.white)), backgroundColor: Colors.black,),
-      body: Text("Sample Body"),
-      backgroundColor: Colors.white12,
+        title: Text(
+          "Sample App", 
+          style: TextStyle(color: Colors.white, fontSize: 24.00 )), 
+          backgroundColor: Colors.black,),
     ));
   }
 }
